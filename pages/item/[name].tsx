@@ -34,8 +34,12 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => ({
-  paths: [],
-  fallback: 'blocking'
+  paths: [{
+    params:{
+       name: 'food'
+    }
+  }],
+  fallback: true
 });
 
 const Item = (props: Props) => {
